@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Playwright vs Puppeteer benchmark results</title>
+<style>
+:root { color-scheme: light dark; font-family: ui-sans-serif, system-ui, sans-serif; line-height: 1.5; }
+body { margin: 0 auto; padding: 1rem; max-width: 110rem; }
+h1 { font-size: 1.8rem; } h2 { margin-top: 2rem; font-size: 1.25rem; }
+code { overflow-wrap: anywhere; } .notes { max-width: 75rem; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.benchmark-table { border-collapse: collapse; width: 100%; min-width: 52rem; font-variant-numeric: tabular-nums; }
+.benchmark-table th, .benchmark-table td { border: 1px solid color-mix(in srgb, currentColor 25%, transparent); padding: .45rem .55rem; text-align: right; white-space: nowrap; }
+.benchmark-table th:first-child, .benchmark-table td:first-child, .benchmark-table th:last-child, .benchmark-table td:last-child { text-align: left; }
+.benchmark-table thead { background: color-mix(in srgb, currentColor 8%, transparent); }
+.benchmark-table caption { text-align: left; padding: .4rem 0; }
+@media (max-width: 48rem) { body { padding: .65rem; } .benchmark-table { font-size: .85rem; } }
+</style></head><body>
+<h1>Playwright vs Puppeteer benchmark results</h1>
+<div class="notes">
+<p>Generated 2026-10-25T23:34:27.247526+00:00. Benchmark ID <code>full-2026-10-25T21-15-03-105Z-572b6c20</code>.</p>
+<p>playwright 1.64.1, puppeteer 25.16.0; v22.22.0; Google Chrome 156.0.8078.47; macOS 26.7.1 (25.6.0); Apple M1 Max, 64 GiB, MacBookPro18,2.</p>
+<p>3600 measured records and 240 warmups. Each library and scenario has 50 measured iterations in each of 3 batches. Measured failures: 1. Warmup failures: 0. Forced cleanups: 2250 measured and 141 warmup.</p>
+<p>Successful measured runs only. Failed runs and warmups remain in raw.jsonl and failure counts, but not timing or memory percentiles.</p>
+<p>Sorted values; rank=(n-1)*p; linear interpolation between floor(rank) and ceil(rank). Median uses p=0.5 and p95 uses p=0.95.</p>
+<p>KiB. Each iteration schedules aggregate RSS sampling every 50 ms for the Node driver and attributed Chrome tree, then takes the peak. Statistics summarize those per-iteration peaks. RSS counts resident pages, not unique physical memory. Shared pages can be counted in more than one process, so the sum can overstate memory. A 50 ms sampler can miss shorter spikes, and Chrome startup before root discovery is not fully sampled. The Node driver is reused across iterations while each browser is fresh.</p>
+<p>browser.close() has 250 ms to finish. If the owned Chrome tree stalls it, the runner allows 100 ms for orphaned helpers, then signals only owned Chrome processes. SIGTERM has 250 ms before SIGKILL. Forced cleanup counts are reported.</p>
+<p>Wall time includes the run-scoped fixture reset, process-monitor setup, browser launch, context/page creation, workflow, cleanup, and the process-exit check. It is absolute elapsed time, not a normalized score. Outliers remain in the data. Renderer recovery crashes one renderer through CDP Page.crash, not the whole browser.</p>
+</div>
+<section id="basic">
+<h2>basic</h2>
+<p>Concurrency 1. Output SHA-256 <code>82019f3c6c2f557b28d49baef9f3d98a49e82563c2ec7969e390208861e59e38</code>.</p>
+<ul><li>playwright: batch 1: 50, batch 2: 50, batch 3: 50</li><li>puppeteer: batch 1: 50, batch 2: 50, batch 3: 50</li></ul>
+<div class="table-scroll"><table class="benchmark-table">
+<caption>basic results. Times are milliseconds; memory is KiB.</caption>
+<thead><tr><th>Library</th><th>N</th><th>Wall median</th><th>Wall p95</th><th>Workflow median</th><th>Peak RSS median</th><th>Failures</th><th>Forced cleanup</th></tr></thead>
+<tbody><tr>
+<td>playwright</td>
+<td>150</td>
+<td>1,534.297</td>
+<td>1,912.884</td>
+<td>43.312</td>
+<td>1,389,200</td>
+<td>0</td>
+<td>133</td>
+</tr><tr>
+<td>puppeteer</td>
+<td>150</td>
+<td>1,485.032</td>
+<td>1,721.059</td>
+<td>28.117</td>
+<td>1,279,208</td>
+<td>0</td>
+<td>80</td>
+</tr></tbody>
+</table></div>
+</section><section id="js">
+<h2>js</h2>
+<p>Concurrency 1. Output SHA-256 <code>82019f3c6c2f557b28d49baef9f3d98a49e82563c2ec7969e390208861e59e38</code>.</p>
+<ul><li>playwright: batch 1: 50, batch 2: 50, batch 3: 50</li><li>puppeteer: batch 1: 50, batch 2: 50, batch 3: 50</li></ul>
+<div class="table-scroll"><table class="benchmark-table">
+<caption>js results. Times are milliseconds; memory is KiB.</caption>
+<thead><tr><th>Library</th><th>N</th><th>Wall median</th><th>Wall p95</th><th>Workflow median</th><th>Peak RSS median</th><th>Failures</th><th>Forced cleanup</th></tr></thead>
+<tbody><tr>
+<td>playwright</td>
+<td>150</td>
+<td>1,539.874</td>
+<td>2,081.991</td>
+<td>79.507</td>
+<td>1,413,824</td>
+<td>0</td>
+<td>109</td>
+</tr><tr>
+<td>puppeteer</td>
+<td>150</td>
+<td>1,448.311</td>
+<td>2,078.267</td>
+<td>52.349</td>
+<td>1,391,064</td>
+<td>0</td>
+<td>77</td>
+</tr></tbody>
+</table></div>
+</section><section id="slow">
+<h2>slow</h2>
+<p>Concurrency 1. Output SHA-256 <code>82019f3c6c2f557b28d49baef9f3d98a49e82563c2ec7969e390208861e59e38</code>.</p>
+<ul><li>playwright: batch 1: 50, batch 2: 50, batch 3: 50</li><li>puppeteer: batch 1: 50, batch 2: 50, batch 3: 50</li></ul>
+<div class="table-scroll"><table class="benchmark-table">
+<caption>slow results. Times are milliseconds; memory is KiB.</caption>
+<thead><tr><th>Library</th><th>N</th><th>Wall median</th><th>Wall p95</th><th>Workflow median</th><th>Peak RSS median</th><th>Failures</th><th>Forced cleanup</th></tr></thead>
+<tbody><tr>
+<td>playwright</td>
+<td>150</td>
+<td>1,588.321</td>
+<td>1,952.328</td>
+<td>127.119</td>
+<td>1,397,048</td>
+<td>0</td>
+<td>134</td>
+</tr><tr>
+<td>puppeteer</td>
+<td>150</td>
+<td>1,585.66</td>
+<td>1,785.88</td>
+<td>111.992</td>
+<td>1,393,904</td>
+<td>0</td>
+<td>101</td>
+</tr></tbody>
+</table></div>
+</section><section id="session-create">
+<h2>session-create</h2>
+<p>Concurrency 1. Output SHA-256 <code>82019f3c6c2f557b28d49baef9f3d98a49e82563c2ec7969e390208861e59e38</code>.</p>
+<ul><li>playwright: batch 1: 50, batch 2: 50, batch 3: 50</li><li>puppeteer: batch 1: 50, batch 2: 50, batch 3: 50</li></ul>
+<div class="table-scroll"><table class="benchmark-table">
+<caption>session-create results. Times are milliseconds; memory is KiB.</caption>
+<thead><tr><th>Library</th><th>N</th><th>Wall median</th><th>Wall p95</th><th>Workflow median</th><th>Peak RSS median</th><th>Failures</th><th>Forced cleanup</th></tr></thead>
+<tbody><tr>
+<td>playwright</td>
+<td>150</td>
+<td>1,230.64</td>
+<td>1,941.823</td>
+<td>42.187</td>
+<td>1,366,672</td>
+<td>0</td>
+<td>92</td>
+</tr><tr>
+<td>puppeteer</td>
+<td>150</td>
+<td>1,084.488</td>
+<td>1,938.537</td>
+<td>26.953</td>
+<td>1,340,840</td>
+<td>0</td>
+<td>56</td>
+</tr></tbody>
+</table></div>
+</section><section id="session-reuse">
+<h2>session-reuse</h2>
+<p>Concurrency 1. Output SHA-256 <code>dcbeb5da6d230aac45370a586f29f45165bbf09a657c230cce74f8cc2f9b0685</code>.</p>
+<ul><li>playwright: batch 1: 50, batch 2: 50, batch 3: 50</li><li>puppeteer: batch 1: 50, batch 2: 50, batch 3: 50</li></ul>
+<div class="table-scroll"><table class="benchmark-table">
+<caption>session-reuse results. Times are milliseconds; memory is KiB.</caption>
+<thead><tr><th>Library</th><th>N</th><th>Wall median</th><th>Wall p95</th><th>Workflow median</th><th>Peak RSS median</th><th>Failures</th><th>Forced cleanup</th></tr></thead>
+<tbody><tr>
+<td>playwright</td>
+<td>150</td>
+<td>1,224.635</td>
+<td>1,593.065</td>
+<td>130.094</td>
+<td>1,431,696</td>
+<td>0</td>
+<td>78</td>
+</tr><tr>
+<td>puppeteer</td>
+<td>150</td>
+<td>1,120.927</td>
+<td>1,583.748</td>
+<td>70.284</td>
+<td>1,399,392</td>
+<td>0</td>
+<td>63</td>
+</tr></tbody>
+</table></div>
+</section><section id="failure-recovery">
+<h2>failure-recovery</h2>
+<p>Concurrency 1. Output SHA-256 <code>82019f3c6c2f557b28d49baef9f3d98a49e82563c2ec7969e390208861e59e38</code>.</p>
+<ul><li>playwright: batch 1: 50, batch 2: 50, batch 3: 50</li><li>puppeteer: batch 1: 50, batch 2: 50, batch 3: 50</li></ul>
+<div class="table-scroll"><table class="benchmark-table">
+<caption>failure-recovery results. Times are milliseconds; memory is KiB.</caption>
+<thead><tr><th>Library</th><th>N</th><th>Wall median</th><th>Wall p95</th><th>Workflow median</th><th>Peak RSS median</th><th>Failures</th><th>Forced cleanup</th></tr></thead>
+<tbody><tr>
+<td>playwright</td>
+<td>150</td>
+<td>1,142.159</td>
+<td>1,929.826</td>
+<td>61.028</td>
+<td>1,400,944</td>
+<td>0</td>
+<td>63</td>
+</tr><tr>
+<td>puppeteer</td>
+<td>150</td>
+<td>1,083.589</td>
+<td>1,895.598</td>
+<td>43.42</td>
+<td>1,370,080</td>
+<td>0</td>
+<td>49</td>
+</tr></tbody>
+</table></div>
+</section><section id="session-expiry-recovery">
+<h2>session-expiry-recovery</h2>
+<p>Concurrency 1. Output SHA-256 <code>82019f3c6c2f557b28d49baef9f3d98a49e82563c2ec7969e390208861e59e38</code>.</p>
+<ul><li>playwright: batch 1: 50, batch 2: 50, batch 3: 50</li><li>puppeteer: batch 1: 50, batch 2: 50, batch 3: 50</li></ul>
+<div class="table-scroll"><table class="benchmark-table">
+<caption>session-expiry-recovery results. Times are milliseconds; memory is KiB.</caption>
+<thead><tr><th>Library</th><th>N</th><th>Wall median</th><th>Wall p95</th><th>Workflow median</th><th>Peak RSS median</th><th>Failures</th><th>Forced cleanup</th></tr></thead>
+<tbody><tr>
+<td>playwright</td>
+<td>150</td>
+<td>1,444.541</td>
+<td>2,077.536</td>
+<td>94.228</td>
+<td>1,417,296</td>
+<td>0</td>
+<td>103</td>
+</tr><tr>
+<td>puppeteer</td>
+<td>150</td>
+<td>1,401.074</td>
+<td>2,087.995</td>
+<td>65.921</td>
+<td>1,402,752</td>
+<td>1 ({&quot;navigation&quot;:1})</td>
+<td>78</td>
+</tr></tbody>
+</table></div>
+</section><section id="renderer-recovery">
+<h2>renderer-recovery</h2>
+<p>Concurrency 1. Output SHA-256 <code>82019f3c6c2f557b28d49baef9f3d98a49e82563c2ec7969e390208861e59e38</code>.</p>
+<ul><li>playwright: batch 1: 50, batch 2: 50, batch 3: 50</li><li>puppeteer: batch 1: 50, batch 2: 50, batch 3: 50</li></ul>
+<div class="table-scroll"><table class="benchmark-table">
+<caption>renderer-recovery results. Times are milliseconds; memory is KiB.</caption>
+<thead><tr><th>Library</th><th>N</th><th>Wall median</th><th>Wall p95</th><th>Workflow median</th><th>Peak RSS median</th><th>Failures</th><th>Forced cleanup</th></tr></thead>
+<tbody><tr>
+<td>playwright</td>
+<td>150</td>
+<td>2,055.498</td>
+<td>2,164.111</td>
+<td>523.392</td>
+<td>1,418,832</td>
+<td>0</td>
+<td>136</td>
+</tr><tr>
+<td>puppeteer</td>
+<td>150</td>
+<td>2,011.867</td>
+<td>2,119.403</td>
+<td>495.967</td>
+<td>1,408,272</td>
+<td>0</td>
+<td>124</td>
+</tr></tbody>
+</table></div>
+</section><section id="concurrency-1">
+<h2>concurrency-1</h2>
+<p>Concurrency 1. Output SHA-256 <code>ac6bd22766ce3e7b430b83e87c80413b94dbb867778645d9452f030757a8d5f4</code>.</p>
+<ul><li>playwright: batch 1: 50, batch 2: 50, batch 3: 50</li><li>puppeteer: batch 1: 50, batch 2: 50, batch 3: 50</li></ul>
+<div class="table-scroll"><table class="benchmark-table">
+<caption>concurrency-1 results. Times are milliseconds; memory is KiB.</caption>
+<thead><tr><th>Library</th><th>N</th><th>Wall median</th><th>Wall p95</th><th>Workflow median</th><th>Peak RSS median</th><th>Failures</th><th>Forced cleanup</th></tr></thead>
+<tbody><tr>
+<td>playwright</td>
+<td>150</td>
+<td>1,606.429</td>
+<td>2,000.381</td>
+<td>72.252</td>
+<td>1,411,792</td>
+<td>0</td>
+<td>134</td>
+</tr><tr>
+<td>puppeteer</td>
+<td>150</td>
+<td>1,601.285</td>
+<td>1,927.544</td>
+<td>51.627</td>
+<td>1,394,464</td>
+<td>0</td>
+<td>131</td>
+</tr></tbody>
+</table></div>
+</section><section id="concurrency-4">
+<h2>concurrency-4</h2>
+<p>Concurrency 4. Output SHA-256 <code>e64c969be7b6b5ca04613bd4494e74c6ff44580864523d80972275ca7dfed801</code>.</p>
+<ul><li>playwright: batch 1: 50, batch 2: 50, batch 3: 50</li><li>puppeteer: batch 1: 50, batch 2: 50, batch 3: 50</li></ul>
+<div class="table-scroll"><table class="benchmark-table">
+<caption>concurrency-4 results. Times are milliseconds; memory is KiB.</caption>
+<thead><tr><th>Library</th><th>N</th><th>Wall median</th><th>Wall p95</th><th>Workflow median</th><th>Peak RSS median</th><th>Failures</th><th>Forced cleanup</th></tr></thead>
+<tbody><tr>
+<td>playwright</td>
+<td>150</td>
+<td>1,838.042</td>
+<td>2,748.425</td>
+<td>284.519</td>
+<td>1,832,768</td>
+<td>0</td>
+<td>114</td>
+</tr><tr>
+<td>puppeteer</td>
+<td>150</td>
+<td>1,667.812</td>
+<td>2,988.284</td>
+<td>260.658</td>
+<td>1,779,920</td>
+<td>0</td>
+<td>51</td>
+</tr></tbody>
+</table></div>
+</section><section id="concurrency-8">
+<h2>concurrency-8</h2>
+<p>Concurrency 8. Output SHA-256 <code>9244121abcf131043b86118367776ce4bb0304765f5b90cdef7f052c90ccec70</code>.</p>
+<ul><li>playwright: batch 1: 50, batch 2: 50, batch 3: 50</li><li>puppeteer: batch 1: 50, batch 2: 50, batch 3: 50</li></ul>
+<div class="table-scroll"><table class="benchmark-table">
+<caption>concurrency-8 results. Times are milliseconds; memory is KiB.</caption>
+<thead><tr><th>Library</th><th>N</th><th>Wall median</th><th>Wall p95</th><th>Workflow median</th><th>Peak RSS median</th><th>Failures</th><th>Forced cleanup</th></tr></thead>
+<tbody><tr>
+<td>playwright</td>
+<td>150</td>
+<td>2,029.764</td>
+<td>2,891.27</td>
+<td>499.086</td>
+<td>2,378,624</td>
+<td>0</td>
+<td>100</td>
+</tr><tr>
+<td>puppeteer</td>
+<td>150</td>
+<td>1,939.736</td>
+<td>2,986.905</td>
+<td>537.88</td>
+<td>2,259,944</td>
+<td>0</td>
+<td>60</td>
+</tr></tbody>
+</table></div>
+</section><section id="concurrency-16">
+<h2>concurrency-16</h2>
+<p>Concurrency 16. Output SHA-256 <code>b31009e6e04bec7779759c294c34215206b3a9d5772fb9b38ed9e4bd16e07ded</code>.</p>
+<ul><li>playwright: batch 1: 50, batch 2: 50, batch 3: 50</li><li>puppeteer: batch 1: 50, batch 2: 50, batch 3: 50</li></ul>
+<div class="table-scroll"><table class="benchmark-table">
+<caption>concurrency-16 results. Times are milliseconds; memory is KiB.</caption>
+<thead><tr><th>Library</th><th>N</th><th>Wall median</th><th>Wall p95</th><th>Workflow median</th><th>Peak RSS median</th><th>Failures</th><th>Forced cleanup</th></tr></thead>
+<tbody><tr>
+<td>playwright</td>
+<td>150</td>
+<td>2,306.164</td>
+<td>3,361.031</td>
+<td>819.052</td>
+<td>3,493,488</td>
+<td>0</td>
+<td>104</td>
+</tr><tr>
+<td>puppeteer</td>
+<td>150</td>
+<td>2,418.128</td>
+<td>3,409.615</td>
+<td>1,028.314</td>
+<td>3,212,864</td>
+<td>0</td>
+<td>80</td>
+</tr></tbody>
+</table></div>
+</section>
+</body></html>

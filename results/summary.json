@@ -1,0 +1,2718 @@
+{
+  "methodology": {
+    "mode": "full",
+    "benchmarkId": "full-2026-10-25T21-15-03-105Z-572b6c20",
+    "generatedAt": "2026-10-25T23:34:27.247526+00:00",
+    "sourceRaw": "raw.jsonl",
+    "rawSha256": "da404c9c6fbd41bc00a43f2aa741be99abba3ccf166dca17b677ae7bc6faeded",
+    "rawRecordCount": 3840,
+    "measuredRecordCount": 3600,
+    "warmupRecordCount": 240,
+    "measuredFailures": 1,
+    "warmupFailures": 0,
+    "measuredForcedCleanups": 2250,
+    "warmupForcedCleanups": 141,
+    "iterationsPerLibraryScenarioBatch": 50,
+    "batches": [
+      1,
+      2,
+      3
+    ],
+    "warmupsPerLibraryScenario": 10,
+    "percentile": "Sorted values; rank=(n-1)*p; linear interpolation between floor(rank) and ceil(rank). Median uses p=0.5 and p95 uses p=0.95.",
+    "statisticsPopulation": "Successful measured runs only. Failed runs and warmups remain in raw.jsonl and failure counts, but not timing or memory percentiles.",
+    "memory": "KiB. Each iteration schedules aggregate RSS sampling every 50 ms for the Node driver and attributed Chrome tree, then takes the peak. Statistics summarize those per-iteration peaks.",
+    "cleanup": "browser.close() has 250 ms to finish. If the owned Chrome tree stalls it, the runner allows 100 ms for orphaned helpers, then signals only owned Chrome processes. SIGTERM has 250 ms before SIGKILL. Forced cleanup counts are reported."
+  },
+  "environment": {
+    "nodeVersion": "v22.22.0",
+    "chromeVersion": "Google Chrome 156.0.8078.47",
+    "osVersion": "macOS 26.7.1 (25.6.0)",
+    "hardware": "Apple M1 Max, 64 GiB, MacBookPro18,2",
+    "platform": "darwin-arm64",
+    "libraryVersions": {
+      "playwright": "1.64.1",
+      "puppeteer": "25.16.0"
+    }
+  },
+  "scenarios": [
+    {
+      "scenario": "basic",
+      "concurrency": 1,
+      "outputHash": "82019f3c6c2f557b28d49baef9f3d98a49e82563c2ec7969e390208861e59e38",
+      "libraries": [
+        {
+          "library": "playwright",
+          "libraryVersion": "1.64.1",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 133,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1534.297,
+            "p95": 1912.884,
+            "min": 1023.789,
+            "max": 2906.535
+          },
+          "launchMs": {
+            "median": 290.27,
+            "p95": 490.181,
+            "min": 240.42,
+            "max": 758.891
+          },
+          "contextMs": {
+            "median": 4.278,
+            "p95": 16.101,
+            "min": 3.222,
+            "max": 73.105
+          },
+          "pageMs": {
+            "median": 164.703,
+            "p95": 369.359,
+            "min": 131.873,
+            "max": 1016.186
+          },
+          "workflowMs": {
+            "median": 43.312,
+            "p95": 80.354,
+            "min": 34.723,
+            "max": 115.523
+          },
+          "navigationMs": {
+            "median": 11.744,
+            "p95": 33.5,
+            "min": 8.322,
+            "max": 54.354
+          },
+          "waitMs": {
+            "median": 21.883,
+            "p95": 40.141,
+            "min": 16.515,
+            "max": 82.372
+          },
+          "extractionMs": {
+            "median": 8.896,
+            "p95": 14.427,
+            "min": 7.49,
+            "max": 18.641
+          },
+          "closeMs": {
+            "median": 665.143,
+            "p95": 816.781,
+            "min": 248.223,
+            "max": 1226.358
+          },
+          "peakSampledRssKiB": {
+            "median": 1389200.0,
+            "p95": 1494173.6,
+            "min": 1059312,
+            "max": 1507856
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1192424.0,
+            "p95": 1296116.8,
+            "min": 864048,
+            "max": 1308640
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 196640.0,
+            "p95": 199216.0,
+            "min": 195264,
+            "max": 199248
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1556.265,
+              "wallP95Ms": 2052.464
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1527.655,
+              "wallP95Ms": 1915.831
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1487.338,
+              "wallP95Ms": 1604.134
+            }
+          ]
+        },
+        {
+          "library": "puppeteer",
+          "libraryVersion": "25.16.0",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 80,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1485.032,
+            "p95": 1721.059,
+            "min": 885.004,
+            "max": 2301.553
+          },
+          "launchMs": {
+            "median": 297.609,
+            "p95": 511.192,
+            "min": 248.453,
+            "max": 1277.087
+          },
+          "contextMs": {
+            "median": 2.888,
+            "p95": 6.658,
+            "min": 2.387,
+            "max": 20.532
+          },
+          "pageMs": {
+            "median": 159.635,
+            "p95": 367.698,
+            "min": 136.308,
+            "max": 445.984
+          },
+          "workflowMs": {
+            "median": 28.117,
+            "p95": 65.375,
+            "min": 19.549,
+            "max": 102.439
+          },
+          "navigationMs": {
+            "median": 11.228,
+            "p95": 31.483,
+            "min": 8.306,
+            "max": 59.393
+          },
+          "waitMs": {
+            "median": 15.559,
+            "p95": 34.576,
+            "min": 8.669,
+            "max": 88.907
+          },
+          "extractionMs": {
+            "median": 0.504,
+            "p95": 1.571,
+            "min": 0.279,
+            "max": 3.667
+          },
+          "closeMs": {
+            "median": 550.685,
+            "p95": 800.749,
+            "min": 106.575,
+            "max": 867.873
+          },
+          "peakSampledRssKiB": {
+            "median": 1279208.0,
+            "p95": 1409839.2,
+            "min": 1001008,
+            "max": 1483568
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1082656.0,
+            "p95": 1212176.8,
+            "min": 805328,
+            "max": 1288304
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 195264.0,
+            "p95": 197840.0,
+            "min": 195264,
+            "max": 198048
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1540.13,
+              "wallP95Ms": 1916.205
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1422.647,
+              "wallP95Ms": 1669.587
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1486.091,
+              "wallP95Ms": 1596.087
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "js",
+      "concurrency": 1,
+      "outputHash": "82019f3c6c2f557b28d49baef9f3d98a49e82563c2ec7969e390208861e59e38",
+      "libraries": [
+        {
+          "library": "playwright",
+          "libraryVersion": "1.64.1",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 109,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1539.874,
+            "p95": 2081.991,
+            "min": 1021.927,
+            "max": 2933.014
+          },
+          "launchMs": {
+            "median": 292.798,
+            "p95": 441.725,
+            "min": 236.313,
+            "max": 704.407
+          },
+          "contextMs": {
+            "median": 4.507,
+            "p95": 16.719,
+            "min": 3.382,
+            "max": 92.318
+          },
+          "pageMs": {
+            "median": 167.769,
+            "p95": 320.284,
+            "min": 137.516,
+            "max": 582.035
+          },
+          "workflowMs": {
+            "median": 79.507,
+            "p95": 117.524,
+            "min": 60.836,
+            "max": 163.292
+          },
+          "navigationMs": {
+            "median": 13.02,
+            "p95": 32.0,
+            "min": 7.994,
+            "max": 66.163
+          },
+          "waitMs": {
+            "median": 48.028,
+            "p95": 95.083,
+            "min": 30.305,
+            "max": 115.615
+          },
+          "extractionMs": {
+            "median": 8.221,
+            "p95": 13.217,
+            "min": 7.352,
+            "max": 26.95
+          },
+          "closeMs": {
+            "median": 538.649,
+            "p95": 896.975,
+            "min": 245.941,
+            "max": 1128.281
+          },
+          "peakSampledRssKiB": {
+            "median": 1413824.0,
+            "p95": 1435512.8,
+            "min": 1271488,
+            "max": 1508432
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1216584.0,
+            "p95": 1239620.8,
+            "min": 1072256,
+            "max": 1312464
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 196656.0,
+            "p95": 199248.0,
+            "min": 195600,
+            "max": 199536
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1713.129,
+              "wallP95Ms": 2377.258
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1221.666,
+              "wallP95Ms": 1691.917
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1546.15,
+              "wallP95Ms": 1659.928
+            }
+          ]
+        },
+        {
+          "library": "puppeteer",
+          "libraryVersion": "25.16.0",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 77,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1448.311,
+            "p95": 2078.267,
+            "min": 893.224,
+            "max": 2461.193
+          },
+          "launchMs": {
+            "median": 299.409,
+            "p95": 478.824,
+            "min": 244.768,
+            "max": 546.261
+          },
+          "contextMs": {
+            "median": 2.941,
+            "p95": 6.556,
+            "min": 2.341,
+            "max": 17.915
+          },
+          "pageMs": {
+            "median": 167.215,
+            "p95": 290.69,
+            "min": 137.894,
+            "max": 428.327
+          },
+          "workflowMs": {
+            "median": 52.349,
+            "p95": 70.078,
+            "min": 49.087,
+            "max": 125.561
+          },
+          "navigationMs": {
+            "median": 12.105,
+            "p95": 34.787,
+            "min": 8.519,
+            "max": 64.211
+          },
+          "waitMs": {
+            "median": 39.724,
+            "p95": 42.433,
+            "min": 8.889,
+            "max": 77.515
+          },
+          "extractionMs": {
+            "median": 0.46,
+            "p95": 1.104,
+            "min": 0.296,
+            "max": 17.772
+          },
+          "closeMs": {
+            "median": 502.753,
+            "p95": 894.681,
+            "min": 113.264,
+            "max": 1054.755
+          },
+          "peakSampledRssKiB": {
+            "median": 1391064.0,
+            "p95": 1430169.6,
+            "min": 1164640,
+            "max": 1495504
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1194384.0,
+            "p95": 1233723.2,
+            "min": 969392,
+            "max": 1297632
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 195280.0,
+            "p95": 197872.0,
+            "min": 195248,
+            "max": 197888
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1586.858,
+              "wallP95Ms": 2185.762
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1142.195,
+              "wallP95Ms": 1593.606
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1501.167,
+              "wallP95Ms": 1599.342
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "slow",
+      "concurrency": 1,
+      "outputHash": "82019f3c6c2f557b28d49baef9f3d98a49e82563c2ec7969e390208861e59e38",
+      "libraries": [
+        {
+          "library": "playwright",
+          "libraryVersion": "1.64.1",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 134,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1588.321,
+            "p95": 1952.328,
+            "min": 1126.998,
+            "max": 2974.819
+          },
+          "launchMs": {
+            "median": 285.204,
+            "p95": 475.956,
+            "min": 245.221,
+            "max": 790.002
+          },
+          "contextMs": {
+            "median": 4.06,
+            "p95": 11.497,
+            "min": 3.26,
+            "max": 24.704
+          },
+          "pageMs": {
+            "median": 158.027,
+            "p95": 320.753,
+            "min": 137.426,
+            "max": 1053.151
+          },
+          "workflowMs": {
+            "median": 127.119,
+            "p95": 151.344,
+            "min": 122.572,
+            "max": 205.557
+          },
+          "navigationMs": {
+            "median": 100.923,
+            "p95": 108.8,
+            "min": 98.551,
+            "max": 121.827
+          },
+          "waitMs": {
+            "median": 17.59,
+            "p95": 27.384,
+            "min": 15.513,
+            "max": 76.903
+          },
+          "extractionMs": {
+            "median": 8.061,
+            "p95": 11.396,
+            "min": 7.267,
+            "max": 35.628
+          },
+          "closeMs": {
+            "median": 710.361,
+            "p95": 839.621,
+            "min": 242.275,
+            "max": 1056.742
+          },
+          "peakSampledRssKiB": {
+            "median": 1397048.0,
+            "p95": 1486296.0,
+            "min": 1370928,
+            "max": 1500560
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1199936.0,
+            "p95": 1290312.0,
+            "min": 1175632,
+            "max": 1304576
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 196672.0,
+            "p95": 199296.0,
+            "min": 195232,
+            "max": 199296
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1693.301,
+              "wallP95Ms": 2034.349
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1503.771,
+              "wallP95Ms": 2131.06
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1584.428,
+              "wallP95Ms": 1756.822
+            }
+          ]
+        },
+        {
+          "library": "puppeteer",
+          "libraryVersion": "25.16.0",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 101,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1585.66,
+            "p95": 1785.88,
+            "min": 1031.225,
+            "max": 2875.34
+          },
+          "launchMs": {
+            "median": 286.626,
+            "p95": 453.598,
+            "min": 247.267,
+            "max": 576.709
+          },
+          "contextMs": {
+            "median": 2.796,
+            "p95": 5.074,
+            "min": 2.402,
+            "max": 13.688
+          },
+          "pageMs": {
+            "median": 154.681,
+            "p95": 287.259,
+            "min": 133.677,
+            "max": 607.248
+          },
+          "workflowMs": {
+            "median": 111.992,
+            "p95": 134.923,
+            "min": 107.427,
+            "max": 362.778
+          },
+          "navigationMs": {
+            "median": 100.466,
+            "p95": 109.629,
+            "min": 98.334,
+            "max": 171.43
+          },
+          "waitMs": {
+            "median": 10.541,
+            "p95": 22.824,
+            "min": 6.953,
+            "max": 189.729
+          },
+          "extractionMs": {
+            "median": 0.391,
+            "p95": 1.552,
+            "min": 0.312,
+            "max": 4.068
+          },
+          "closeMs": {
+            "median": 732.785,
+            "p95": 826.477,
+            "min": 194.339,
+            "max": 890.334
+          },
+          "peakSampledRssKiB": {
+            "median": 1393904.0,
+            "p95": 1479296.0,
+            "min": 1358816,
+            "max": 1499264
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1197504.0,
+            "p95": 1283791.2,
+            "min": 1163584,
+            "max": 1303968
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 195296.0,
+            "p95": 197920.0,
+            "min": 195216,
+            "max": 198256
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1640.827,
+              "wallP95Ms": 1806.999
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1489.467,
+              "wallP95Ms": 1812.869
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1586.561,
+              "wallP95Ms": 1756.55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "session-create",
+      "concurrency": 1,
+      "outputHash": "82019f3c6c2f557b28d49baef9f3d98a49e82563c2ec7969e390208861e59e38",
+      "libraries": [
+        {
+          "library": "playwright",
+          "libraryVersion": "1.64.1",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 92,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1230.64,
+            "p95": 1941.823,
+            "min": 972.596,
+            "max": 2946.077
+          },
+          "launchMs": {
+            "median": 274.69,
+            "p95": 449.623,
+            "min": 244.512,
+            "max": 684.901
+          },
+          "contextMs": {
+            "median": 3.989,
+            "p95": 7.219,
+            "min": 3.258,
+            "max": 46.286
+          },
+          "pageMs": {
+            "median": 152.421,
+            "p95": 290.474,
+            "min": 136.349,
+            "max": 566.72
+          },
+          "workflowMs": {
+            "median": 42.187,
+            "p95": 67.99,
+            "min": 35.324,
+            "max": 210.008
+          },
+          "navigationMs": {
+            "median": 11.948,
+            "p95": 28.157,
+            "min": 9.626,
+            "max": 173.255
+          },
+          "waitMs": {
+            "median": 21.136,
+            "p95": 29.16,
+            "min": 16.47,
+            "max": 80.769
+          },
+          "extractionMs": {
+            "median": 8.845,
+            "p95": 11.551,
+            "min": 7.493,
+            "max": 22.698
+          },
+          "closeMs": {
+            "median": 448.165,
+            "p95": 870.492,
+            "min": 244.899,
+            "max": 1174.545
+          },
+          "peakSampledRssKiB": {
+            "median": 1366672.0,
+            "p95": 1422068.0,
+            "min": 1095808,
+            "max": 1485344
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1171488.0,
+            "p95": 1223243.2,
+            "min": 897728,
+            "max": 1289360
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 196672.0,
+            "p95": 199464.8,
+            "min": 195184,
+            "max": 199552
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1241.341,
+              "wallP95Ms": 2422.742
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1084.197,
+              "wallP95Ms": 1636.958
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1536.967,
+              "wallP95Ms": 1658.768
+            }
+          ]
+        },
+        {
+          "library": "puppeteer",
+          "libraryVersion": "25.16.0",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 56,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1084.488,
+            "p95": 1938.537,
+            "min": 836.326,
+            "max": 3347.112
+          },
+          "launchMs": {
+            "median": 277.738,
+            "p95": 440.824,
+            "min": 253.129,
+            "max": 885.618
+          },
+          "contextMs": {
+            "median": 2.76,
+            "p95": 5.557,
+            "min": 2.307,
+            "max": 27.795
+          },
+          "pageMs": {
+            "median": 153.014,
+            "p95": 297.066,
+            "min": 138.386,
+            "max": 1015.651
+          },
+          "workflowMs": {
+            "median": 26.953,
+            "p95": 46.89,
+            "min": 20.744,
+            "max": 82.176
+          },
+          "navigationMs": {
+            "median": 11.29,
+            "p95": 22.539,
+            "min": 9.244,
+            "max": 42.481
+          },
+          "waitMs": {
+            "median": 14.604,
+            "p95": 26.32,
+            "min": 9.662,
+            "max": 40.516
+          },
+          "extractionMs": {
+            "median": 0.481,
+            "p95": 1.271,
+            "min": 0.269,
+            "max": 2.321
+          },
+          "closeMs": {
+            "median": 294.5,
+            "p95": 836.671,
+            "min": 100.143,
+            "max": 1107.078
+          },
+          "peakSampledRssKiB": {
+            "median": 1340840.0,
+            "p95": 1406360.8,
+            "min": 998976,
+            "max": 1447728
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1145544.0,
+            "p95": 1210167.2,
+            "min": 803680,
+            "max": 1252432
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 195296.0,
+            "p95": 198160.0,
+            "min": 195184,
+            "max": 198656
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1190.67,
+              "wallP95Ms": 2423.139
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 982.54,
+              "wallP95Ms": 1351.506
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1488.526,
+              "wallP95Ms": 1621.135
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "session-reuse",
+      "concurrency": 1,
+      "outputHash": "dcbeb5da6d230aac45370a586f29f45165bbf09a657c230cce74f8cc2f9b0685",
+      "libraries": [
+        {
+          "library": "playwright",
+          "libraryVersion": "1.64.1",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 78,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1224.635,
+            "p95": 1593.065,
+            "min": 1072.902,
+            "max": 1749.068
+          },
+          "launchMs": {
+            "median": 268.325,
+            "p95": 295.167,
+            "min": 242.808,
+            "max": 318.428
+          },
+          "contextMs": {
+            "median": 3.845,
+            "p95": 5.477,
+            "min": 3.186,
+            "max": 10.622
+          },
+          "pageMs": {
+            "median": 150.426,
+            "p95": 175.151,
+            "min": 129.871,
+            "max": 196.226
+          },
+          "workflowMs": {
+            "median": 130.094,
+            "p95": 140.686,
+            "min": 122.902,
+            "max": 176.285
+          },
+          "navigationMs": {
+            "median": 41.847,
+            "p95": 48.741,
+            "min": 38.258,
+            "max": 71.994
+          },
+          "waitMs": {
+            "median": 63.686,
+            "p95": 69.839,
+            "min": 57.669,
+            "max": 78.508
+          },
+          "extractionMs": {
+            "median": 23.578,
+            "p95": 25.869,
+            "min": 22.404,
+            "max": 56.505
+          },
+          "closeMs": {
+            "median": 387.656,
+            "p95": 773.517,
+            "min": 244.606,
+            "max": 851.15
+          },
+          "peakSampledRssKiB": {
+            "median": 1431696.0,
+            "p95": 1514400.8,
+            "min": 1380672,
+            "max": 1525440
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1232912.0,
+            "p95": 1314050.4,
+            "min": 1180304,
+            "max": 1322960
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 200688.0,
+            "p95": 203808.0,
+            "min": 196336,
+            "max": 204128
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1578.45,
+              "wallP95Ms": 1588.463
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1142.976,
+              "wallP95Ms": 1224.187
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1280.516,
+              "wallP95Ms": 1637.837
+            }
+          ]
+        },
+        {
+          "library": "puppeteer",
+          "libraryVersion": "25.16.0",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 63,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1120.927,
+            "p95": 1583.748,
+            "min": 875.453,
+            "max": 1592.041
+          },
+          "launchMs": {
+            "median": 278.779,
+            "p95": 308.978,
+            "min": 253.673,
+            "max": 446.631
+          },
+          "contextMs": {
+            "median": 2.715,
+            "p95": 3.944,
+            "min": 2.36,
+            "max": 9.743
+          },
+          "pageMs": {
+            "median": 148.914,
+            "p95": 180.834,
+            "min": 135.741,
+            "max": 460.348
+          },
+          "workflowMs": {
+            "median": 70.284,
+            "p95": 85.719,
+            "min": 60.588,
+            "max": 122.848
+          },
+          "navigationMs": {
+            "median": 37.183,
+            "p95": 42.815,
+            "min": 33.408,
+            "max": 57.274
+          },
+          "waitMs": {
+            "median": 31.145,
+            "p95": 40.629,
+            "min": 24.828,
+            "max": 64.279
+          },
+          "extractionMs": {
+            "median": 1.083,
+            "p95": 2.227,
+            "min": 0.848,
+            "max": 3.192
+          },
+          "closeMs": {
+            "median": 287.652,
+            "p95": 775.636,
+            "min": 101.18,
+            "max": 791.799
+          },
+          "peakSampledRssKiB": {
+            "median": 1399392.0,
+            "p95": 1417386.4,
+            "min": 1270272,
+            "max": 1504880
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1202720.0,
+            "p95": 1221582.4,
+            "min": 1072016,
+            "max": 1306576
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 195360.0,
+            "p95": 198304.0,
+            "min": 195056,
+            "max": 198576
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1483.702,
+              "wallP95Ms": 1543.744
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 992.629,
+              "wallP95Ms": 1182.349
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1120.927,
+              "wallP95Ms": 1588.337
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "failure-recovery",
+      "concurrency": 1,
+      "outputHash": "82019f3c6c2f557b28d49baef9f3d98a49e82563c2ec7969e390208861e59e38",
+      "libraries": [
+        {
+          "library": "playwright",
+          "libraryVersion": "1.64.1",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 63,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1142.159,
+            "p95": 1929.826,
+            "min": 969.548,
+            "max": 2469.058
+          },
+          "launchMs": {
+            "median": 275.942,
+            "p95": 394.896,
+            "min": 239.131,
+            "max": 504.782
+          },
+          "contextMs": {
+            "median": 4.002,
+            "p95": 6.585,
+            "min": 3.281,
+            "max": 37.096
+          },
+          "pageMs": {
+            "median": 155.422,
+            "p95": 274.448,
+            "min": 138.56,
+            "max": 362.957
+          },
+          "workflowMs": {
+            "median": 61.028,
+            "p95": 87.527,
+            "min": 51.618,
+            "max": 109.551
+          },
+          "navigationMs": {
+            "median": 32.84,
+            "p95": 55.239,
+            "min": 24.942,
+            "max": 73.572
+          },
+          "waitMs": {
+            "median": 19.345,
+            "p95": 24.666,
+            "min": 15.723,
+            "max": 42.012
+          },
+          "extractionMs": {
+            "median": 8.198,
+            "p95": 9.978,
+            "min": 7.292,
+            "max": 34.492
+          },
+          "closeMs": {
+            "median": 294.74,
+            "p95": 843.587,
+            "min": 241.048,
+            "max": 1502.767
+          },
+          "peakSampledRssKiB": {
+            "median": 1400944.0,
+            "p95": 1422637.6,
+            "min": 1258288,
+            "max": 1505856
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1203264.0,
+            "p95": 1224240.0,
+            "min": 1059968,
+            "max": 1309792
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 196736.0,
+            "p95": 199712.0,
+            "min": 190368,
+            "max": 200384
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1082.571,
+              "wallP95Ms": 1503.274
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1348.22,
+              "wallP95Ms": 2087.78
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1081.697,
+              "wallP95Ms": 1585.165
+            }
+          ]
+        },
+        {
+          "library": "puppeteer",
+          "libraryVersion": "25.16.0",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 49,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1083.589,
+            "p95": 1895.598,
+            "min": 873.717,
+            "max": 2246.067
+          },
+          "launchMs": {
+            "median": 283.097,
+            "p95": 423.783,
+            "min": 240.525,
+            "max": 504.293
+          },
+          "contextMs": {
+            "median": 2.743,
+            "p95": 5.745,
+            "min": 2.325,
+            "max": 9.943
+          },
+          "pageMs": {
+            "median": 154.411,
+            "p95": 272.898,
+            "min": 135.652,
+            "max": 335.266
+          },
+          "workflowMs": {
+            "median": 43.42,
+            "p95": 80.079,
+            "min": 33.928,
+            "max": 143.017
+          },
+          "navigationMs": {
+            "median": 31.379,
+            "p95": 67.248,
+            "min": 24.736,
+            "max": 135.446
+          },
+          "waitMs": {
+            "median": 10.449,
+            "p95": 16.389,
+            "min": 5.676,
+            "max": 36.894
+          },
+          "extractionMs": {
+            "median": 0.456,
+            "p95": 1.354,
+            "min": 0.281,
+            "max": 4.398
+          },
+          "closeMs": {
+            "median": 285.524,
+            "p95": 804.084,
+            "min": 104.865,
+            "max": 865.455
+          },
+          "peakSampledRssKiB": {
+            "median": 1370080.0,
+            "p95": 1408456.0,
+            "min": 1034880,
+            "max": 1494368
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1174696.0,
+            "p95": 1211760.0,
+            "min": 839936,
+            "max": 1298992
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 195376.0,
+            "p95": 198352.0,
+            "min": 189680,
+            "max": 199008
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1028.865,
+              "wallP95Ms": 1372.274
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1437.073,
+              "wallP95Ms": 2015.208
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1068.227,
+              "wallP95Ms": 1544.136
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "session-expiry-recovery",
+      "concurrency": 1,
+      "outputHash": "82019f3c6c2f557b28d49baef9f3d98a49e82563c2ec7969e390208861e59e38",
+      "libraries": [
+        {
+          "library": "playwright",
+          "libraryVersion": "1.64.1",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 103,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1444.541,
+            "p95": 2077.536,
+            "min": 1075.889,
+            "max": 2496.704
+          },
+          "launchMs": {
+            "median": 287.337,
+            "p95": 448.135,
+            "min": 240.527,
+            "max": 740.677
+          },
+          "contextMs": {
+            "median": 4.09,
+            "p95": 8.528,
+            "min": 3.259,
+            "max": 36.31
+          },
+          "pageMs": {
+            "median": 163.632,
+            "p95": 301.229,
+            "min": 142.694,
+            "max": 429.005
+          },
+          "workflowMs": {
+            "median": 94.228,
+            "p95": 167.223,
+            "min": 80.606,
+            "max": 302.307
+          },
+          "navigationMs": {
+            "median": 48.659,
+            "p95": 96.347,
+            "min": 39.82,
+            "max": 169.481
+          },
+          "waitMs": {
+            "median": 37.326,
+            "p95": 56.7,
+            "min": 30.854,
+            "max": 142.318
+          },
+          "extractionMs": {
+            "median": 8.377,
+            "p95": 11.761,
+            "min": 7.581,
+            "max": 43.703
+          },
+          "closeMs": {
+            "median": 551.67,
+            "p95": 835.094,
+            "min": 252.171,
+            "max": 968.511
+          },
+          "peakSampledRssKiB": {
+            "median": 1417296.0,
+            "p95": 1431360.0,
+            "min": 1334672,
+            "max": 1437104
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1221072.0,
+            "p95": 1231916.0,
+            "min": 1136320,
+            "max": 1235952
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 198128.0,
+            "p95": 201120.0,
+            "min": 190480,
+            "max": 201152
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1440.678,
+              "wallP95Ms": 1651.42
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1598.098,
+              "wallP95Ms": 2317.075
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1153.622,
+              "wallP95Ms": 1615.281
+            }
+          ]
+        },
+        {
+          "library": "puppeteer",
+          "libraryVersion": "25.16.0",
+          "measuredRuns": 150,
+          "successfulRuns": 149,
+          "failures": 1,
+          "duplicates": 0,
+          "forcedCleanups": 78,
+          "failureCategories": {
+            "navigation": 1
+          },
+          "wallMs": {
+            "median": 1401.074,
+            "p95": 2087.995,
+            "min": 882.999,
+            "max": 2373.801
+          },
+          "launchMs": {
+            "median": 292.092,
+            "p95": 477.632,
+            "min": 254.197,
+            "max": 598.535
+          },
+          "contextMs": {
+            "median": 2.85,
+            "p95": 5.663,
+            "min": 2.382,
+            "max": 13.641
+          },
+          "pageMs": {
+            "median": 166.001,
+            "p95": 306.377,
+            "min": 140.71,
+            "max": 351.868
+          },
+          "workflowMs": {
+            "median": 65.921,
+            "p95": 114.11,
+            "min": 52.672,
+            "max": 233.063
+          },
+          "navigationMs": {
+            "median": 43.278,
+            "p95": 75.001,
+            "min": 34.528,
+            "max": 118.399
+          },
+          "waitMs": {
+            "median": 22.308,
+            "p95": 38.471,
+            "min": 14.436,
+            "max": 148.439
+          },
+          "extractionMs": {
+            "median": 0.429,
+            "p95": 1.113,
+            "min": 0.306,
+            "max": 8.295
+          },
+          "closeMs": {
+            "median": 474.533,
+            "p95": 860.821,
+            "min": 102.747,
+            "max": 981.262
+          },
+          "peakSampledRssKiB": {
+            "median": 1402752.0,
+            "p95": 1414707.2,
+            "min": 1171936,
+            "max": 1426400
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1208016.0,
+            "p95": 1219977.6,
+            "min": 982144,
+            "max": 1228032
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 195440.0,
+            "p95": 198384.0,
+            "min": 189536,
+            "max": 199040
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1453.472,
+              "wallP95Ms": 1646.292
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 49,
+              "failures": 1,
+              "wallMedianMs": 1582.539,
+              "wallP95Ms": 2193.871
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1151.052,
+              "wallP95Ms": 1651.511
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "renderer-recovery",
+      "concurrency": 1,
+      "outputHash": "82019f3c6c2f557b28d49baef9f3d98a49e82563c2ec7969e390208861e59e38",
+      "libraries": [
+        {
+          "library": "playwright",
+          "libraryVersion": "1.64.1",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 136,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 2055.498,
+            "p95": 2164.111,
+            "min": 1490.536,
+            "max": 5290.143
+          },
+          "launchMs": {
+            "median": 285.615,
+            "p95": 303.497,
+            "min": 239.381,
+            "max": 418.697
+          },
+          "contextMs": {
+            "median": 3.997,
+            "p95": 6.189,
+            "min": 3.448,
+            "max": 9.791
+          },
+          "pageMs": {
+            "median": 163.799,
+            "p95": 185.668,
+            "min": 141.932,
+            "max": 246.212
+          },
+          "workflowMs": {
+            "median": 523.392,
+            "p95": 548.077,
+            "min": 496.901,
+            "max": 578.168
+          },
+          "navigationMs": {
+            "median": 20.532,
+            "p95": 25.736,
+            "min": 16.765,
+            "max": 27.69
+          },
+          "waitMs": {
+            "median": 40.623,
+            "p95": 46.999,
+            "min": 33.631,
+            "max": 58.3
+          },
+          "extractionMs": {
+            "median": 8.056,
+            "p95": 10.076,
+            "min": 7.45,
+            "max": 11.183
+          },
+          "closeMs": {
+            "median": 780.794,
+            "p95": 832.614,
+            "min": 272.113,
+            "max": 4049.925
+          },
+          "peakSampledRssKiB": {
+            "median": 1418832.0,
+            "p95": 1509460.8,
+            "min": 1371216,
+            "max": 1514608
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1222928.0,
+            "p95": 1312708.0,
+            "min": 1182096,
+            "max": 1316512
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 195664.0,
+            "p95": 200136.8,
+            "min": 189696,
+            "max": 201168
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 2062.535,
+              "wallP95Ms": 2169.638
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 2005.168,
+              "wallP95Ms": 2456.074
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 2055.934,
+              "wallP95Ms": 2114.144
+            }
+          ]
+        },
+        {
+          "library": "puppeteer",
+          "libraryVersion": "25.16.0",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 124,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 2011.867,
+            "p95": 2119.403,
+            "min": 1395.628,
+            "max": 4090.074
+          },
+          "launchMs": {
+            "median": 292.366,
+            "p95": 316.887,
+            "min": 248.112,
+            "max": 360.247
+          },
+          "contextMs": {
+            "median": 2.736,
+            "p95": 4.094,
+            "min": 2.462,
+            "max": 12.334
+          },
+          "pageMs": {
+            "median": 165.387,
+            "p95": 187.385,
+            "min": 144.705,
+            "max": 210.063
+          },
+          "workflowMs": {
+            "median": 495.967,
+            "p95": 528.812,
+            "min": 469.655,
+            "max": 856.248
+          },
+          "navigationMs": {
+            "median": 18.236,
+            "p95": 22.099,
+            "min": 16.004,
+            "max": 24.773
+          },
+          "waitMs": {
+            "median": 26.203,
+            "p95": 34.156,
+            "min": 19.69,
+            "max": 47.403
+          },
+          "extractionMs": {
+            "median": 0.394,
+            "p95": 1.24,
+            "min": 0.293,
+            "max": 12.135
+          },
+          "closeMs": {
+            "median": 783.597,
+            "p95": 815.569,
+            "min": 215.9,
+            "max": 2842.932
+          },
+          "peakSampledRssKiB": {
+            "median": 1408272.0,
+            "p95": 1497878.4,
+            "min": 1398240,
+            "max": 1502896
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1214128.0,
+            "p95": 1302496.0,
+            "min": 1208240,
+            "max": 1308928
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 193968.0,
+            "p95": 198424.8,
+            "min": 188288,
+            "max": 198768
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 2053.892,
+              "wallP95Ms": 2160.472
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1980.181,
+              "wallP95Ms": 2112.426
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 2011.774,
+              "wallP95Ms": 2112.75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "concurrency-1",
+      "concurrency": 1,
+      "outputHash": "ac6bd22766ce3e7b430b83e87c80413b94dbb867778645d9452f030757a8d5f4",
+      "libraries": [
+        {
+          "library": "playwright",
+          "libraryVersion": "1.64.1",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 134,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1606.429,
+            "p95": 2000.381,
+            "min": 1027.392,
+            "max": 5392.288
+          },
+          "launchMs": {
+            "median": 287.442,
+            "p95": 397.763,
+            "min": 244.695,
+            "max": 556.575
+          },
+          "contextMs": {
+            "median": 4.088,
+            "p95": 7.425,
+            "min": 3.31,
+            "max": 31.491
+          },
+          "pageMs": {
+            "median": 167.415,
+            "p95": 262.248,
+            "min": 144.457,
+            "max": 347.01
+          },
+          "workflowMs": {
+            "median": 72.252,
+            "p95": 114.01,
+            "min": 60.584,
+            "max": 118.625
+          },
+          "navigationMs": {
+            "median": 11.491,
+            "p95": 23.613,
+            "min": 8.642,
+            "max": 51.211
+          },
+          "waitMs": {
+            "median": 48.398,
+            "p95": 93.957,
+            "min": 34.605,
+            "max": 97.405
+          },
+          "extractionMs": {
+            "median": 8.046,
+            "p95": 10.974,
+            "min": 7.366,
+            "max": 15.95
+          },
+          "closeMs": {
+            "median": 784.207,
+            "p95": 862.258,
+            "min": 243.52,
+            "max": 4536.001
+          },
+          "peakSampledRssKiB": {
+            "median": 1411792.0,
+            "p95": 1433636.8,
+            "min": 1270208,
+            "max": 1523520
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1215024.0,
+            "p95": 1227884.0,
+            "min": 1060128,
+            "max": 1310304
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 199072.0,
+            "p95": 213216.0,
+            "min": 162128,
+            "max": 213552
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1621.129,
+              "wallP95Ms": 2056.62
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1653.653,
+              "wallP95Ms": 1905.292
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1554.986,
+              "wallP95Ms": 1652.839
+            }
+          ]
+        },
+        {
+          "library": "puppeteer",
+          "libraryVersion": "25.16.0",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 131,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1601.285,
+            "p95": 1927.544,
+            "min": 883.659,
+            "max": 16143.368
+          },
+          "launchMs": {
+            "median": 294.791,
+            "p95": 421.273,
+            "min": 249.937,
+            "max": 450.587
+          },
+          "contextMs": {
+            "median": 2.782,
+            "p95": 4.713,
+            "min": 2.405,
+            "max": 15.177
+          },
+          "pageMs": {
+            "median": 165.066,
+            "p95": 243.159,
+            "min": 141.972,
+            "max": 387.754
+          },
+          "workflowMs": {
+            "median": 51.627,
+            "p95": 58.447,
+            "min": 49.333,
+            "max": 76.476
+          },
+          "navigationMs": {
+            "median": 10.375,
+            "p95": 20.381,
+            "min": 8.339,
+            "max": 41.965
+          },
+          "waitMs": {
+            "median": 40.557,
+            "p95": 42.593,
+            "min": 19.566,
+            "max": 44.117
+          },
+          "extractionMs": {
+            "median": 0.416,
+            "p95": 0.781,
+            "min": 0.296,
+            "max": 1.556
+          },
+          "closeMs": {
+            "median": 777.878,
+            "p95": 845.814,
+            "min": 102.766,
+            "max": 15348.268
+          },
+          "peakSampledRssKiB": {
+            "median": 1394464.0,
+            "p95": 1421275.2,
+            "min": 1154720,
+            "max": 1506832
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1198192.0,
+            "p95": 1212504.8,
+            "min": 956336,
+            "max": 1294992
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 198352.0,
+            "p95": 211840.0,
+            "min": 180992,
+            "max": 212528
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1607.668,
+              "wallP95Ms": 1970.101
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1612.589,
+              "wallP95Ms": 1691.587
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1538.55,
+              "wallP95Ms": 1609.685
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "concurrency-4",
+      "concurrency": 4,
+      "outputHash": "e64c969be7b6b5ca04613bd4494e74c6ff44580864523d80972275ca7dfed801",
+      "libraries": [
+        {
+          "library": "playwright",
+          "libraryVersion": "1.64.1",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 114,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1838.042,
+            "p95": 2748.425,
+            "min": 1179.894,
+            "max": 4622.954
+          },
+          "launchMs": {
+            "median": 373.117,
+            "p95": 602.361,
+            "min": 255.052,
+            "max": 1163.387
+          },
+          "contextMs": {
+            "median": 4.947,
+            "p95": 16.759,
+            "min": 3.234,
+            "max": 76.552
+          },
+          "pageMs": {
+            "median": 223.713,
+            "p95": 438.23,
+            "min": 140.661,
+            "max": 803.128
+          },
+          "workflowMs": {
+            "median": 284.519,
+            "p95": 537.354,
+            "min": 184.14,
+            "max": 718.179
+          },
+          "navigationMs": {
+            "median": 141.918,
+            "p95": 263.397,
+            "min": 75.394,
+            "max": 400.794
+          },
+          "waitMs": {
+            "median": 259.786,
+            "p95": 420.809,
+            "min": 174.16,
+            "max": 784.282
+          },
+          "extractionMs": {
+            "median": 59.835,
+            "p95": 139.823,
+            "min": 32.294,
+            "max": 245.32
+          },
+          "closeMs": {
+            "median": 526.988,
+            "p95": 902.833,
+            "min": 245.019,
+            "max": 1269.412
+          },
+          "peakSampledRssKiB": {
+            "median": 1832768.0,
+            "p95": 1865152.0,
+            "min": 1597920,
+            "max": 1872064
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1630112.0,
+            "p95": 1654866.4,
+            "min": 1403904,
+            "max": 1661120
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 202744.0,
+            "p95": 218485.6,
+            "min": 194736,
+            "max": 220176
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1779.971,
+              "wallP95Ms": 2748.425
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1812.079,
+              "wallP95Ms": 2121.771
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1912.534,
+              "wallP95Ms": 3161.788
+            }
+          ]
+        },
+        {
+          "library": "puppeteer",
+          "libraryVersion": "25.16.0",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 51,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1667.812,
+            "p95": 2988.284,
+            "min": 978.68,
+            "max": 4343.73
+          },
+          "launchMs": {
+            "median": 384.141,
+            "p95": 597.069,
+            "min": 265.642,
+            "max": 769.67
+          },
+          "contextMs": {
+            "median": 3.24,
+            "p95": 10.722,
+            "min": 2.387,
+            "max": 33.601
+          },
+          "pageMs": {
+            "median": 211.657,
+            "p95": 465.598,
+            "min": 140.949,
+            "max": 729.251
+          },
+          "workflowMs": {
+            "median": 260.658,
+            "p95": 511.424,
+            "min": 142.827,
+            "max": 774.526
+          },
+          "navigationMs": {
+            "median": 120.867,
+            "p95": 234.408,
+            "min": 65.125,
+            "max": 435.783
+          },
+          "waitMs": {
+            "median": 221.948,
+            "p95": 480.877,
+            "min": 134.584,
+            "max": 985.513
+          },
+          "extractionMs": {
+            "median": 4.155,
+            "p95": 25.655,
+            "min": 1.482,
+            "max": 68.344
+          },
+          "closeMs": {
+            "median": 354.517,
+            "p95": 942.275,
+            "min": 98.253,
+            "max": 1551.011
+          },
+          "peakSampledRssKiB": {
+            "median": 1779920.0,
+            "p95": 1818688.0,
+            "min": 1550624,
+            "max": 1833776
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 1583840.0,
+            "p95": 1617904.0,
+            "min": 1356576,
+            "max": 1622544
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 198504.0,
+            "p95": 214632.8,
+            "min": 194016,
+            "max": 215408
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1567.175,
+              "wallP95Ms": 3045.673
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1656.899,
+              "wallP95Ms": 2289.635
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1853.691,
+              "wallP95Ms": 3134.964
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "concurrency-8",
+      "concurrency": 8,
+      "outputHash": "9244121abcf131043b86118367776ce4bb0304765f5b90cdef7f052c90ccec70",
+      "libraries": [
+        {
+          "library": "playwright",
+          "libraryVersion": "1.64.1",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 100,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 2029.764,
+            "p95": 2891.27,
+            "min": 1233.02,
+            "max": 3553.233
+          },
+          "launchMs": {
+            "median": 351.88,
+            "p95": 525.904,
+            "min": 247.748,
+            "max": 742.807
+          },
+          "contextMs": {
+            "median": 4.377,
+            "p95": 14.016,
+            "min": 3.237,
+            "max": 32.594
+          },
+          "pageMs": {
+            "median": 202.445,
+            "p95": 307.759,
+            "min": 136.763,
+            "max": 662.434
+          },
+          "workflowMs": {
+            "median": 499.086,
+            "p95": 841.914,
+            "min": 287.072,
+            "max": 1006.496
+          },
+          "navigationMs": {
+            "median": 337.316,
+            "p95": 633.656,
+            "min": 172.326,
+            "max": 890.206
+          },
+          "waitMs": {
+            "median": 669.267,
+            "p95": 1143.264,
+            "min": 401.903,
+            "max": 1816.826
+          },
+          "extractionMs": {
+            "median": 172.29,
+            "p95": 342.778,
+            "min": 69.958,
+            "max": 460.367
+          },
+          "closeMs": {
+            "median": 534.388,
+            "p95": 932.881,
+            "min": 245.35,
+            "max": 1403.485
+          },
+          "peakSampledRssKiB": {
+            "median": 2378624.0,
+            "p95": 2455440.8,
+            "min": 2080480,
+            "max": 2467344
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 2177664.0,
+            "p95": 2233788.8,
+            "min": 1880688,
+            "max": 2239712
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 205616.0,
+            "p95": 224156.0,
+            "min": 198512,
+            "max": 234432
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 2332.163,
+              "wallP95Ms": 3155.371
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1335.405,
+              "wallP95Ms": 1644.621
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 2203.519,
+              "wallP95Ms": 2746.765
+            }
+          ]
+        },
+        {
+          "library": "puppeteer",
+          "libraryVersion": "25.16.0",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 60,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 1939.736,
+            "p95": 2986.905,
+            "min": 1026.948,
+            "max": 3391.739
+          },
+          "launchMs": {
+            "median": 353.851,
+            "p95": 528.161,
+            "min": 252.99,
+            "max": 832.704
+          },
+          "contextMs": {
+            "median": 3.057,
+            "p95": 7.112,
+            "min": 2.296,
+            "max": 16.087
+          },
+          "pageMs": {
+            "median": 200.41,
+            "p95": 350.078,
+            "min": 139.939,
+            "max": 544.867
+          },
+          "workflowMs": {
+            "median": 537.88,
+            "p95": 875.31,
+            "min": 207.875,
+            "max": 1199.796
+          },
+          "navigationMs": {
+            "median": 253.082,
+            "p95": 476.607,
+            "min": 159.112,
+            "max": 755.458
+          },
+          "waitMs": {
+            "median": 599.741,
+            "p95": 1006.26,
+            "min": 258.467,
+            "max": 1609.1
+          },
+          "extractionMs": {
+            "median": 11.05,
+            "p95": 64.823,
+            "min": 2.968,
+            "max": 530.269
+          },
+          "closeMs": {
+            "median": 333.919,
+            "p95": 908.016,
+            "min": 97.82,
+            "max": 1095.366
+          },
+          "peakSampledRssKiB": {
+            "median": 2259944.0,
+            "p95": 2327792.8,
+            "min": 2123584,
+            "max": 2355536
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 2060144.0,
+            "p95": 2124049.6,
+            "min": 1928240,
+            "max": 2155184
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 199000.0,
+            "p95": 216675.2,
+            "min": 194384,
+            "max": 226560
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 2307.316,
+              "wallP95Ms": 3226.061
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1179.642,
+              "wallP95Ms": 1338.123
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 2097.571,
+              "wallP95Ms": 2625.825
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "concurrency-16",
+      "concurrency": 16,
+      "outputHash": "b31009e6e04bec7779759c294c34215206b3a9d5772fb9b38ed9e4bd16e07ded",
+      "libraries": [
+        {
+          "library": "playwright",
+          "libraryVersion": "1.64.1",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 104,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 2306.164,
+            "p95": 3361.031,
+            "min": 1477.821,
+            "max": 3791.942
+          },
+          "launchMs": {
+            "median": 286.103,
+            "p95": 441.805,
+            "min": 244.446,
+            "max": 604.61
+          },
+          "contextMs": {
+            "median": 4.088,
+            "p95": 7.345,
+            "min": 3.122,
+            "max": 29.054
+          },
+          "pageMs": {
+            "median": 156.905,
+            "p95": 263.363,
+            "min": 136.145,
+            "max": 402.195
+          },
+          "workflowMs": {
+            "median": 819.052,
+            "p95": 1456.756,
+            "min": 531.203,
+            "max": 1918.891
+          },
+          "navigationMs": {
+            "median": 788.17,
+            "p95": 1307.892,
+            "min": 448.984,
+            "max": 2599.945
+          },
+          "waitMs": {
+            "median": 2042.163,
+            "p95": 3598.968,
+            "min": 1332.149,
+            "max": 4661.707
+          },
+          "extractionMs": {
+            "median": 526.958,
+            "p95": 941.132,
+            "min": 179.029,
+            "max": 1424.72
+          },
+          "closeMs": {
+            "median": 627.047,
+            "p95": 893.801,
+            "min": 245.267,
+            "max": 993.258
+          },
+          "peakSampledRssKiB": {
+            "median": 3493488.0,
+            "p95": 3613798.4,
+            "min": 3261456,
+            "max": 3627840
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 3281568.0,
+            "p95": 3387028.8,
+            "min": 3064272,
+            "max": 3397936
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 215872.0,
+            "p95": 231740.0,
+            "min": 202416,
+            "max": 238832
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1622.968,
+              "wallP95Ms": 2465.751
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 2280.872,
+              "wallP95Ms": 2750.768
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 2896.452,
+              "wallP95Ms": 3537.343
+            }
+          ]
+        },
+        {
+          "library": "puppeteer",
+          "libraryVersion": "25.16.0",
+          "measuredRuns": 150,
+          "successfulRuns": 150,
+          "failures": 0,
+          "duplicates": 0,
+          "forcedCleanups": 80,
+          "failureCategories": {},
+          "wallMs": {
+            "median": 2418.128,
+            "p95": 3409.615,
+            "min": 1277.158,
+            "max": 3640.685
+          },
+          "launchMs": {
+            "median": 292.063,
+            "p95": 439.84,
+            "min": 259.289,
+            "max": 544.988
+          },
+          "contextMs": {
+            "median": 2.83,
+            "p95": 5.194,
+            "min": 2.447,
+            "max": 11.197
+          },
+          "pageMs": {
+            "median": 156.45,
+            "p95": 278.769,
+            "min": 136.767,
+            "max": 451.099
+          },
+          "workflowMs": {
+            "median": 1028.314,
+            "p95": 1477.541,
+            "min": 404.088,
+            "max": 1577.383
+          },
+          "navigationMs": {
+            "median": 492.178,
+            "p95": 853.8,
+            "min": 328.613,
+            "max": 1171.549
+          },
+          "waitMs": {
+            "median": 1540.748,
+            "p95": 2496.955,
+            "min": 634.403,
+            "max": 4071.106
+          },
+          "extractionMs": {
+            "median": 27.171,
+            "p95": 166.456,
+            "min": 5.539,
+            "max": 1031.877
+          },
+          "closeMs": {
+            "median": 542.51,
+            "p95": 891.644,
+            "min": 128.516,
+            "max": 947.304
+          },
+          "peakSampledRssKiB": {
+            "median": 3212864.0,
+            "p95": 3394636.0,
+            "min": 3079232,
+            "max": 3453360
+          },
+          "peakChromeSampledRssKiB": {
+            "median": 3006904.0,
+            "p95": 3176720.8,
+            "min": 2879712,
+            "max": 3223952
+          },
+          "peakNodeSampledRssKiB": {
+            "median": 207552.0,
+            "p95": 223567.2,
+            "min": 195392,
+            "max": 230768
+          },
+          "batches": [
+            {
+              "batch": 1,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 1522.932,
+              "wallP95Ms": 2702.113
+            },
+            {
+              "batch": 2,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 2342.253,
+              "wallP95Ms": 2807.03
+            },
+            {
+              "batch": 3,
+              "runs": 50,
+              "successfulRuns": 50,
+              "failures": 0,
+              "wallMedianMs": 3154.097,
+              "wallP95Ms": 3477.19
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "state": "complete",
+  "mode": "full",
+  "benchmarkId": "full-2026-10-25T21-15-03-105Z-572b6c20",
+  "expectedRecords": 3840,
+  "completedRecords": 3840,
+  "expectedMeasuredRecords": 3600,
+  "measuredRecords": 3600,
+  "warmupRecords": 240,
+  "failures": 1,
+  "current": null,
+  "updatedAt": "2026-10-25T22:59:04.071Z"
+}

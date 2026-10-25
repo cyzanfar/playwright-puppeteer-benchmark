@@ -1,0 +1,13 @@
+node_modules/
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+.DS_Store
+.venv/
+results/pilot.jsonl
+results/pilot.jsonl.partial
+results/pilot-status.json
+results/pilot-analysis/
+results/raw.jsonl.partial
+results/.verify-control-*

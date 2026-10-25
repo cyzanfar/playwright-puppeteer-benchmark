@@ -1,0 +1,21 @@
+{
+  "name": "nina-playwright-puppeteer-benchmark",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reproducible Playwright and Puppeteer benchmark for Nina Technologies",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": "22.22.0"
+  },
+  "scripts": {
+    "verify": "node src/verify.mjs",
+    "benchmark": "node src/runner.mjs",
+    "analyze": "python3 scripts/analyze.py",
+    "render": "python3 scripts/render-results.py"
+  },
+  "dependencies": {
+    "playwright": "1.64.1",
+    "puppeteer": "25.16.0"
+  }
+}
